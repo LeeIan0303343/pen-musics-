@@ -1,0 +1,13 @@
+std := import('std')
+
+// Define an NPC class
+class NPC:
+    fn interact():
+        std.println("Hello, adventurer! I have a quest for you.")
+
+// Example usage:
+fn main():
+    let npc_instance = NPC()
+    npc_instance.interact()
+
+main()
