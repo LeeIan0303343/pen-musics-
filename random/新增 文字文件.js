@@ -1,7 +1,13 @@
-// Generate a random 19-digit number as a string
-let randomLongNumber = '';
-for (let i = 0; i < 19; i++) {
-    randomLongNumber += Math.floor(Math.random() * 10);
+function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters.charAt(randomIndex);
+    }
+    return result;
 }
 
-console.log("Random long number:", randomLongNumber);
+// Example usage:
+const randomString = generateRandomString(20); // Generates a 20-character random string
+console.log('Random String:', randomString);
